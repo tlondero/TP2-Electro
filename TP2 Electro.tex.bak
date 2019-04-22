@@ -18,8 +18,8 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{93.54 Métodos Numéricos}
-\rhead{Fontecha, Lambertucci, Pouthier, Londero B.}
+\lhead{22.02 Electrotecnia I}
+\rhead{Mechoulam, Mestanza, Lambertucci, Pouthier, Londero B.}
 \rfoot{Página \thepage}
 
 
@@ -35,6 +35,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %								INFORME									%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introducción}
+La experiencia realizada consistió en el análisis del período transitorio de un circuito RC desconocido y de circuitos RLC serie, variando los componentes de este último. Dentro de los elementos utilizado se encuentran:
+	\begin{itemize}
+	\item	Osciloscopio;
+	\item	Multímetro;
+	\item	Fuente de tensión;
+	\item	Resistencia variable;
+	\item	Banco de capacitores;
+	\item	Transistor;	
+	\end{itemize}	  
+
+
+
 
 \textbf{\underline{Ejercicio 1}}
 
