@@ -19,7 +19,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \lhead{22.02 Electrotecnia I}
-\rhead{Mechoulam, Mestanza, Lambertucci, Pouthier, Londero B.}
+\rhead{Mechoulam, Mestanza, Lambertucci, Pouthier, Londero}
 \rfoot{Página \thepage}
 
 
@@ -117,72 +117,93 @@ Se considera ahora el circuito RLC serie de la Figura \ref{RLCserie}.
 \label{RLCserie}
 \end{figure}
 
-Resolvando ese circuito usando el \textit{método de las mallas}, se puede escribir :
+Resolviendo este circuito usando el \textit{método de mallas}, se puede escribir:
 \begin{equation}\label{mallas}
 v_{2}(t) = v_{R}(t)+v_{L}(t)+v_{C}(t).
 \end{equation}
 
-Sin embargo, sabemos que :
-\begin{equation}\label{vryvc}
-v_{R}=R \cdot i(t)
-\quad\text{y}\quad
-v_{L}=L\cdot\frac{di(t)}{dt}
-\end{equation}
-y también que la corriente en el circuito es dado por :
-\begin{equation}\label{corriente}
-i(t)=C \cdot \frac{dv_{C}(t)}{dt}
-\end{equation}
-
-Reemplazando por la expresión (\ref{corriente}) de la corriente en las expresiones de (\ref{vryvc}), se obtiene :
-\begin{equation}
-v_{R}(t)=RC\cdot\frac{dv_{C}(t)}{dt}
-\quad\text{y}\quad
-v_{L}(t)=LC\cdot\frac{d^{2}v_{C}(t)}{dt^{2}}.
-\end{equation}
-
-Entonces, la ecuación (\ref{mallas}) se escribe
-\begin{equation}
-LC\cdot\frac{d^{2}v_{C}(t)}{dt^{2}}+RC\cdot\frac{dv_{C}(t)}{dt}+v_{C}(t)=v_{2}(t),
-\end{equation}
-o también
+%Sin embargo, sabemos que:
+%\begin{equation}\label{vryvc}
+%v_{R}=R \cdot i(t)
+%\quad\text{y}\quad
+%v_{L}=L\cdot\frac{di(t)}{dt}
+%\end{equation}
+%y también que la corriente en el circuito es dado por:
+%\begin{equation}\label{corriente}
+%i(t)=C \cdot \frac{dv_{C}(t)}{dt}
+%\end{equation}
+%
+%Reemplazando por la expresión (\ref{corriente}) de la corriente en las expresiones de (\ref{vryvc}), se obtiene:
+%\begin{equation}
+%v_{R}(t)=RC\cdot\frac{dv_{C}(t)}{dt}
+%\quad\text{y}\quad
+%v_{L}(t)=LC\cdot\frac{d^{2}v_{C}(t)}{dt^{2}}.
+%\end{equation}
+%
+%Entonces, la ecuación (\ref{mallas}) se escribe
+%
+%\begin{equation}
+%LC\cdot\frac{d^{2}v_{C}(t)}{dt^{2}}+RC\cdot\frac{dv_{C}(t)}{dt}+v_{C}(t)=v_{2}(t),
+%\end{equation}
+%o también
+Operando, se llega a la ecuación diferencial:
 \begin{equation}
 \frac{d^{2}v_{C}(t)}{dt^{2}}+\frac{R}{L}\cdot\frac{dv_{C}(t)}{dt}+\frac{1}{LC}\cdot v_{C}(t)=\frac{1}{LC}\cdot v_{2}(t).
 \end{equation}
 
+Considerando que $v_2 = 10\textrm{V}$, $R = 200\Omega$, $L = ?$, $C = ?$ \[\Rightarrow \omega=\frac{1}{\sqrt{LC}}= ?\quad y \quad \alpha=\frac{R}{2L}= ?\] \[\Rightarrow \omega > \alpha\] se puede observar que la solución será de carácter subamortiguado.\\
 
-En el caso de que $R_{t}=0$, la ecuación del circuito se vuelve en la siguiente :
+En el caso de que $R=0$, la ecuación del circuito se vuelve:
 \begin{equation}
 \frac{d^{2}v_{C}(t)}{dt^{2}}+\frac{1}{LC}\cdot v_{C}(t)=\frac{1}{LC}\cdot v_{2}(t).
 \end{equation}
 
-La solución de esa ecuación diferencial se escribe :
-\begin{equation}
-v_{C}(t)=v_{Ch}(t)+v_{Cp}(t),
-\end{equation}
-donde :
-\begin{itemize}
-\item[$\bullet$] $v_{Cp}(t)$ es la \emph{solución particular} de la ecuación o modo forzado, dado por :
-\begin{equation}
-v_{Cp}(t)=V_{2}=v_{2}(t\to\infty)
-\end{equation}
-\item[$\bullet$] $v_{Ch}(t)$ es la \emph{solución homogéneo} de la ecuación, es decir la solución de la ecuación (\ref{eqHom}) :
-\begin{equation}\label{eqHom}
-\frac{d^{2}v_{Ch}(t)}{dt^{2}}+\frac{1}{LC}\cdot v_{Ch}(t)=0
-\quad\Leftrightarrow\quad
-\frac{d^{2}v_{Ch}(t)}{dt^{2}}+\omega_{0}^{2}\cdot v_{Ch}(t)=0
-\end{equation}
-donde
-\begin{equation}
-\omega_{0}=\frac{1}{\sqrt{LC}}.
-\end{equation} 
-Considerando que $v_{Ch}(t)$ es de la forma $v_{Ch}(t)=e^{\beta t}$, se halla sustituando esa expresión en (\ref{eqHom}):
-\begin{equation}
-\beta^{2}e^{\beta t}+\omega_{0}^{2}e^{\beta t}=0
-\quad\Leftrightarrow\quad
-\beta^{2}+\omega_{0}^{2}=0
-\end{equation}
-\end{itemize}
+%La solución de esa ecuación diferencial se escribe:
+%\begin{equation}
+%v_{C}(t)=v_{Ch}(t)+v_{Cp}(t),
+%\end{equation}
+%donde :
+%\begin{itemize}
+%\item[$\bullet$] $v_{Cp}(t)$ es la \emph{solución particular} de la ecuación o modo forzado, dado por:
+%\begin{equation}
+%v_{Cp}(t)=V_{2}=v_{2}(t\to\infty)
+%\end{equation}
+%\item[$\bullet$] $v_{Ch}(t)$ es la \emph{solución homogéneo} de la ecuación, es decir la solución de la ecuación (\ref{eqHom}):
+%\begin{equation}\label{eqHom}
+%\frac{d^{2}v_{Ch}(t)}{dt^{2}}+\frac{1}{LC}\cdot v_{Ch}(t)=0
+%\quad\Leftrightarrow\quad
+%\frac{d^{2}v_{Ch}(t)}{dt^{2}}+\omega_{0}^{2}\cdot v_{Ch}(t)=0
+%\end{equation}
+%donde
+%\begin{equation}
+%\omega_{0}=\frac{1}{\sqrt{LC}}.
+%\end{equation} 
+%Considerando que $v_{Ch}(t)$ es de la forma $v_{Ch}(t)=e^{\beta t}$, se halla sustituando esa expresión en (\ref{eqHom}):
+%\begin{equation}
+%\beta^{2}e^{\beta t}+\omega_{0}^{2}e^{\beta t}=0
+%\quad\Leftrightarrow\quad
+%\beta^{2}+\omega_{0}^{2}=0
+%\end{equation}
+%\end{itemize}
 
-Para concluir, en el caso de $R_{t}=0$, se obtiene un circuito LC que se comporta como un oscilador libre no amortiguado.
+%Para concluir, en el caso de $R_{t}=0$, se obtiene un circuito LC que se comporta como un oscilador libre no amortiguado.
+
+donde se observa que se obtiene un circuito LC que se comporta como un oscilador libre no amortiguado.\\
+
+Si se cortocircuitea la inductancia, resulta:
+\begin{equation}
+\frac{dv_{C}(t)}{dt}+\frac{1}{RC}\cdot v_{C}(t)=\frac{1}{RC}\cdot v_{2}(t)
+\end{equation}\\
+Donde se observa que se obtiene un circuito RC, con una carga y descarga característica, con una constante $\tau = RC$\\
+
+Mediante el uso del lenguaje de programación \textit{Python}, se obtuvo la gráfica teórica de $i(t)$ mostrada a continuación:
+
+Luego, se obtuvo la gráfica de $v_c(t)$, y se la comparó con la obtenida mediante el uso del osciloscopio:
+
+Finalmente, se calcularon los intervalos de $R$ que hacen que el circuito sea subamortiguado, criticamente amortiguado y sobreamortiguado.
+
+\[R_{sub}=[?;?) \quad R_{crit}= ? \quad R_{sobre}=(?;?)\]
 
 \end{document}
+
+
