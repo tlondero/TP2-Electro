@@ -88,37 +88,63 @@ Una vez establecido el tipo de circuito dispuesto, se prosiguió con el analisis
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Carga-transitoria.jpeg}
+	\includegraphics[width=0.8\textwidth]{Carga-transitoria-real.jpeg}
 \caption{Voltaje en función del tiempo a la salida del circuito al someterlo a $ 5 V $.}
+	\label{fig:carg-real}
 \end{figure}
 
 Por ultimo, de la misma forma, se pudo observar su descarga al retirar la tensión proporcionada.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Descarga-transitoria.jpeg}
+	\includegraphics[width=0.8\textwidth]{Descarga-transitoria-real.jpeg}
 	\caption{Voltaje en función del tiempo a la salida del circuito al quitarle la alimentación.}
+	\label{fig:desc-real}
 \end{figure}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%		c. Medir la constante de tiempo del circuito.		%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%		c. Medir la constante de tiempo del circuito.			%
 %		d. obtener los valores de R y C experimentalmente.		%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Colocando un óhmetro en paralelo del circuito, se pudo medir una resistencia $R_{exp}=223.5\Omega$.
-Fijandose al
+Otro interés del trabajo es hallar la constante de tiempo del circuito $ \tau = RC $. Para esto primero se obtuvo el valor de la resistencia $ R $ colocando un un multímetro en paralelo del circuito, obteniéndose $ R_{exp} = 223.5 \Omega $.
+Luego, sabiendo que la tensión en el capacitor al cargarse es
+
+\begin{equation}
+	V_{C} (t) = V_{f} \left( 1 - e^{- \frac{t}{RC}  } \right)
+	\label{eq:carg-eq}
+\end{equation}
+
+y que $ V_{C} (\tau) = 0,63 V_{f} $, siendo $ V_{f} $ la tensión de la fuente, se observa de la figura \ref{fig:carg-real} a que tiempo se llega a una tension de $ 3,15 V $, obteniendo así $ \tau = 90\ \mu s $. Por último, ya con el valor de la resistencia y del tiempo característico, se puede calcular el valor del capacitor, siendo este $ C = 0,40\ \mu f $.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %		e. Obtener la respuesta transitoria por simulación		%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+Al tener los valores experimentales calculados, es posible modelar, de manera teórica, la carga y descarga del capacitor, mediante la ecuación \ref{eq:carg-eq} y la ecuación
 
+\begin{equation}
+	V_{C} (t) = V_{0} \ e^{-\frac{t}{RC}} 
+	\label{eq:des-eq}
+\end{equation}
+
+siendo $ V_{0} $ la tensión inicial del capacitor, que en nuestro caso, es igual a la de la fuente.
+Es así que se obtienen los siguientes gráficos:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Carga-transitoria-teorica.png}
+\caption{Voltaje en función del tiempo a la salida del circuito con $ V_{0} = 0\ V $.}
+	\label{fig:carg-teo}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Descarga-transitoria-teorica.png}
+	\caption{Voltaje en función del tiempo a la salida del circuito con $ V_{0} = 5\ V $.}
+	\label{fig:desc-teo}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %		f. Representar gráficamente y comparar curvas b) y e) y conclusiones.	%
@@ -128,7 +154,7 @@ Fijandose al
 
 \newpage
 
-\textbf{\underline{Ejercicio 2}}
+\subsection*{\underline{Ejercicio 2}}
 
 \vspace{1em}
 
