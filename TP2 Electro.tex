@@ -37,14 +37,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Introducción}
-La experiencia realizada consistió en el análisis del período transitorio de diversos circuitos RC (desconocido) y RLC serie, variando los componentes de este último. Dentro de los elementos utilizado se encuentran:
+La experiencia realizada consistió en el análisis del período transitorio de diversos circuitos RC (desconocido) y RLC serie, variando los componentes de este último. Dentro de los elementos utilizados se encuentran:
 	\begin{itemize}
 	\item[$\bullet$]	Osciloscopio;
 	\item[$\bullet$]	Multímetro;
 	\item[$\bullet$]	Fuente de tensión;
 	\item[$\bullet$]	Resistencia variable;
 	\item[$\bullet$]	Banco de capacitores;
-	\item[$\bullet$]	Transistor.
+	\item[$\bullet$]	Inductor.
 	\end{itemize}	  
 
 \section*{Desarrollo de la experiencia}
@@ -55,7 +55,7 @@ La experiencia realizada consistió en el análisis del período transitorio de 
 %		a. Determinar si es una configuración RC serie o RC paralelo.	%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-En este primer ejercicio, el objetivo fue de determinar la configuración de un circuito dispuesto en una caja, pudiendo ser RC serie o RC paralelo. Para hallarlo se decidió medir la continuidad entre la entrada y la salida de este, ya que se concluyó que, en caso de no poder medirla, se estaría frente a un circuto RC serie, donde el capacitor impide determinar el parámetro anteriormente mencionado. En caso contrario, se estaría midiendo la continuidad sobre la resistencia, como se muestra en la figura \ref{RCserie}.
+En este primer ejercicio, se determinó la configuración de un circuito dispuesto en una caja, pudiendo ser RC serie o RC paralelo. Para hallarlo se decidió medir la continuidad entre la entrada y la salida de este, ya que se concluyó que, en caso de no poder medirla, se estaría frente a un circuto RC serie, donde el capacitor impide determinar el parámetro anteriormente mencionado. En caso contrario, se mediría la continuidad sobre la resistencia, como se muestra en la figura \ref{RCserie}.
 
 \begin{figure}[H]
 \begin{center}
@@ -74,7 +74,7 @@ En este primer ejercicio, el objetivo fue de determinar la configuración de un 
 \end{circuitikz}
 \end{center}
 
-\caption{Circuito RC serie}
+\caption{Circuito RC serie.} 
 \label{RCserie}
 \end{figure}
 
@@ -89,7 +89,7 @@ Una vez establecido el tipo de circuito dispuesto, se prosiguió con el analisis
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{Carga-transitoria-real.jpeg}
-\caption{Voltaje en función del tiempo a la salida del circuito al someterlo a $ 5 V $.}
+\caption{Voltaje medido a la salida del circuito al someterlo a $ 5\ V $.}
 	\label{fig:carg-real}
 \end{figure}
 
@@ -98,7 +98,7 @@ Por ultimo, de la misma forma, se pudo observar su descarga al retirar la tensi�
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{Descarga-transitoria-real.jpeg}
-	\caption{Voltaje en función del tiempo a la salida del circuito al quitarle la alimentación.}
+	\caption{Voltaje medido a la salida del circuito al quitarle la alimentación.}
 	\label{fig:desc-real}
 \end{figure}
 
@@ -150,7 +150,7 @@ Es así que se obtienen los siguientes gráficos:
 %		f. Representar gráficamente y comparar curvas b) y e) y conclusiones.	%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
+Al comparar las figuras \ref{fig:carg-real} con \ref{fig:carg-teo} y \ref{fig:desc-real} con \ref{fig:desc-teo}, se termina de confirmar que el circuito analizado es RC paralelo. Se observa que los gráficos teóricos corresponden a los brindados por el osciloscopio, salvando la diferencia de que, tanto la carga como la descarga teórica comienzan para un tiempo inicial nulo.
 
 \newpage
 
