@@ -156,6 +156,28 @@ Al comparar las figuras \ref{fig:carg-real} con \ref{fig:carg-teo} y \ref{fig:de
 \subsection*{\underline{Ejercicio 2}}
 
 \vspace{1em}
+En el siguiente ejercicio se buscó visualizar el transitorio de la tensión del capacitor en un circuito RLC serie, luego puenteando la resistencia y finalmente con la inductancia. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{carga-rlc.jpeg}
+\caption{Tension sobre el Capacitor, RLC serie.}
+	\label{fig:carg-rlc}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{carga-rlc-nor.jpeg}
+\caption{Tension sobre el Capacitor, LC serie.}
+	\label{fig:carg-lc}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{carga-rlc-nol.jpeg}
+\caption{Tension sobre el Capacitor, RC serie.}
+	\label{fig:carg-rc}
+\end{figure}
+
+
 
 Se considera ahora el circuito RLC serie de la Figura \ref{RLCserie}.
 
@@ -183,6 +205,7 @@ Resolviendo este circuito usando el \textit{método de mallas}, se puede escribi
 \begin{equation}\label{mallas}
 v_{2}(t) = v_{R}(t)+v_{L}(t)+v_{C}(t).
 \end{equation}
+Debido a que durante el experimetno no se obtuvieron los valores tanto de L y C se decidió obtener estos últimos basandose en las graficas del osciloscopio. Mirando la figura \ref{fig:carg-rlc} se puede observar el tiempo caracteristico en 0.63 Vmax se puede despejar el valor de L y midiendo la distancia entre periodos se puede obtener $\omega$'  y de alli con el valor de L despejar C 
 
 %Sin embargo, sabemos que:
 %\begin{equation}\label{vryvc}
@@ -208,12 +231,13 @@ v_{2}(t) = v_{R}(t)+v_{L}(t)+v_{C}(t).
 %LC\cdot\frac{d^{2}v_{C}(t)}{dt^{2}}+RC\cdot\frac{dv_{C}(t)}{dt}+v_{C}(t)=v_{2}(t),
 %\end{equation}
 %o también
+
 Operando, se llega a la ecuación diferencial:
 \begin{equation}
 \frac{d^{2}v_{C}(t)}{dt^{2}}+\frac{R}{L}\cdot\frac{dv_{C}(t)}{dt}+\frac{1}{LC}\cdot v_{C}(t)=\frac{1}{LC}\cdot v_{2}(t).
 \end{equation}
 
-Considerando que $v_2 = 10\textrm{V}$, $R = 200\Omega$, $L = ?$, $C = ?$ \[\Rightarrow \omega=\frac{1}{\sqrt{LC}}= ?\quad y \quad \alpha=\frac{R}{2L}= ?\] \[\Rightarrow \omega > \alpha\] se puede observar que la solución será de carácter subamortiguado.\\
+Considerando que $v_2 = 9.7\textrm{V}$, $R = 250\Omega$, $L = 250mHy$, $C = 900nF$ \[\Rightarrow \omega=\frac{1}{\sqrt{LC}}= 2108.185\quad y \quad \alpha=\frac{R}{2L}= 500\] \[\Rightarrow \omega > \alpha\] se puede observar que la solución será de carácter subamortiguado.\\
 
 En el caso de que $R=0$, la ecuación del circuito se vuelve:
 \begin{equation}
@@ -258,7 +282,7 @@ Si se cortocircuitea la inductancia, resulta:
 \end{equation}\\
 Donde se observa que se obtiene un circuito RC, con una carga y descarga característica, con una constante $\tau = RC$\\
 
-Mediante el uso del simulador \textit{LT}, se obtuvo la gráfica teórica de $i(t)$ mostrada a continuación:
+Mediante el uso del simulador \textit{LTSpice}, se obtuvo la gráfica teórica de $i(t)$ mostrada a continuación:
 
 \begin{figure}[H]
 	\centering
