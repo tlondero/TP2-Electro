@@ -258,13 +258,26 @@ Si se cortocircuitea la inductancia, resulta:
 \end{equation}\\
 Donde se observa que se obtiene un circuito RC, con una carga y descarga característica, con una constante $\tau = RC$\\
 
-Mediante el uso del lenguaje de programación \textit{Python}, se obtuvo la gráfica teórica de $i(t)$ mostrada a continuación:
+Mediante el uso del simulador \textit{LT}, se obtuvo la gráfica teórica de $i(t)$ mostrada a continuación:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.35]{carga-rlc-ic.PNG}
+	\caption{La corriente del sistema.}
+	\label{fig:-corrrlc}
+\end{figure}
 
 Luego, se obtuvo la gráfica de $v_c(t)$, y se la comparó con la obtenida mediante el uso del osciloscopio:
+\flushleft
+\begin{figure}[H]
+	\includegraphics[scale=0.35]{carga-rlc-vc.PNG}
+	\caption{Tension sobre el capacitor.}
+	\label{fig:-tenrlc}
+\end{figure}
 
 Finalmente, se calcularon los intervalos de $R$ que hacen que el circuito sea subamortiguado, criticamente amortiguado y sobreamortiguado.
 
-\[R_{sub}=[?;?) \quad R_{crit}= ? \quad R_{sobre}=(?;?)\]
+\[R_{sub}<1054 \Omega \quad R_{crit}= 1054 \Omega \quad R_{sobre}>1054 \Omega\]
 
 \end{document}
 
