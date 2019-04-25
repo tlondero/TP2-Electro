@@ -275,19 +275,21 @@ En el caso de que $R=0$, la ecuación del circuito se vuelve:
 %Para concluir, en el caso de $R_{t}=0$, se obtiene un circuito LC que se comporta como un oscilador libre no amortiguado.
 
 donde se observa que se obtiene un circuito LC que se comporta como un oscilador libre no amortiguado.\\
+Vease que representa la medicion \ref{fig:carg-lc} (No es ideal dado a la impedancia del osciloscopio)
 
 Si se cortocircuitea la inductancia, resulta:
 \begin{equation}
 \frac{dv_{C}(t)}{dt}+\frac{1}{RC}\cdot v_{C}(t)=\frac{1}{RC}\cdot v_{2}(t)
 \end{equation}\\
 Donde se observa que se obtiene un circuito RC, con una carga y descarga característica, con una constante $\tau = RC$\\
+Vease que representa la medicion \ref{fig:carg-rc}
 
 Mediante el uso del simulador \textit{LTSpice}, se obtuvo la gráfica teórica de $i(t)$ mostrada a continuación:
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.35]{carga-rlc-ic.PNG}
-	\caption{La corriente del sistema.}
+	\caption{La corriente del sistema RLC.}
 	\label{fig:-corrrlc}
 \end{figure}
 
@@ -295,7 +297,7 @@ Luego, se obtuvo la gráfica de $v_c(t)$, y se la comparó con la obtenida media
 \flushleft
 \begin{figure}[H]
 	\includegraphics[scale=0.35]{carga-rlc-vc.PNG}
-	\caption{Tension sobre el capacitor.}
+	\caption{Tension sobre el capacitor en el sistema RLC.}
 	\label{fig:-tenrlc}
 \end{figure}
 
@@ -303,6 +305,6 @@ Finalmente, se calcularon los intervalos de $R$ que hacen que el circuito sea su
 
 \[R_{sub}<1054 \Omega \quad R_{crit}= 1054 \Omega \quad R_{sobre}>1054 \Omega\]
 
+Finalmente, comparando las figuras \ref{fig:carg-rlc} con \ref{fig:-tenrlc} se denota que el gráfico práctico corresponde al teórico, como era de esperarse. Se pueden apreciar ciertas discrepancias entre ambos por motivos tales como el ruido existente, la presición de los intrumentos y las imperfecciones internas, como por ejemplo, que acople del interruptor no es perfecto ni instantaneo. 
+
 \end{document}
-
-
