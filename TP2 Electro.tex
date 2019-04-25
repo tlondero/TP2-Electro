@@ -16,7 +16,7 @@
 
 \usepackage{units} 
 
-%\pagestyle{fancy}
+\pagestyle{fancy}
 \fancyhf{}
 \lhead{22.02 Electrotecnia I}
 \rhead{Mechoulam, Mestanza, Lambertucci, Pouthier, Londero}
@@ -55,9 +55,7 @@ La experiencia realizada consistió en el análisis del período transitorio de 
 %		a. Determinar si es una configuración RC serie o RC paralelo.	%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-En este primer ejercicio, se determinó la configuración de un circuito dispuesto en una caja, pudiendo ser RC serie o RC paralelo. Para hallarlo se decidió medir la continuidad entre la entrada y la salida de este. Una vez constatada, se midió el valor de la resistencia, y se concluyó que, en caso de ser un circuito RC serie, el multímetro indicaría un valor fuera de escala, en caso contrario, se obtendría el valor de dicho dispositivo. De esta forma se concluyó que la forma del circuito es el que se muestra en la figura \ref{RCserie}.
-
-%ya que se concluyó que, en caso de no poder medirla, se estaría frente a un circuto RC serie, donde el capacitor impide determinar el parámetro anteriormente mencionado. En caso contrario, se mediría la continuidad sobre la resistencia, como se muestra en la figura \ref{RCserie}.
+En este primer ejercicio, se determinó la configuración de un circuito dispuesto en una caja, pudiendo ser RC serie o RC paralelo. Para hallarlo se decidió medir la continuidad entre la entrada y la salida de este. Una vez constatada, se midió, de la misma forma,  el valor de la resistencia del circuito, debido a que en caso de ser un circuito RC paralelo, el multímetro indicaría un valor fuera de escala, en caso contrario, se obtendría el valor de dicho dispositivo. De esta forma se concluyó que la forma del circuito es el que se muestra en la figura \ref{RCserie}, es decir, RC serie.
 
 \begin{figure}[H]
 \begin{center}
@@ -104,14 +102,12 @@ Por ultimo, de la misma forma, se pudo observar su descarga al retirar la tensi�
 	\label{fig:desc-real}
 \end{figure}
 
-Las gráficas de las tensiones concuerdan con las de un circuito RC paralelo, como era esperable. 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %		c. Medir la constante de tiempo del circuito.			%
 %		d. obtener los valores de R y C experimentalmente.		%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Otro interés del trabajo fue hallar la constante de tiempo del circuito $ \tau = RC $. Para esto primero se obtuvo el valor de la resistencia $ R $ colocando un un multímetro en paralelo del circuito, obteniéndose $ R_{exp} = 223.5 \Omega $.
+Otro interés del trabajo fue hallar la constante de tiempo del circuito $ \tau = RC $. Para esto primero se obtuvo el valor de la resistencia $ R $ colocando un un multímetro a la entrada y salida del circuito, obteniéndose $ R_{exp} = 223.5 \Omega $.
 Luego, sabiendo que la tensión en el capacitor al cargarse es
 
 \begin{equation}
@@ -119,7 +115,7 @@ Luego, sabiendo que la tensión en el capacitor al cargarse es
 	\label{eq:carg-eq}
 \end{equation}
 
-y que $ V_{C} (\tau) = 0,63 V_{f} $, siendo $ V_{f} $ la tensión de la fuente, se observa de la figura \ref{fig:carg-real} a que tiempo se llega a una tension de $ 3,15 V $, obteniendo así $ \tau = 90\ \mu s $. Por último, ya con el valor de la resistencia y del tiempo característico, se puede calcular el valor del capacitor, siendo este $ C = 0,40\ \mu f $.
+y que $ V_{C} (\tau) = 0,63 V_{f} $, siendo $ V_{f} $ la tensión de la fuente, se observa de la figura \ref{fig:carg-real} el tiempo al que se llega a una tension de $ 3,15 V $, obteniendo así $ \tau = 90\ \mu s $. Por último, ya con el valor de la resistencia y del tiempo característico, se puede calcular el valor del capacitor, siendo este $ C = 0,40\ \mu f $.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %		e. Obtener la respuesta transitoria por simulación		%
@@ -132,7 +128,7 @@ Al tener los valores experimentales calculados, es posible modelar, de manera te
 	\label{eq:des-eq}
 \end{equation}
 
-siendo $ V_{0} $ la tensión inicial del capacitor, que en nuestro caso, es igual a la de la fuente.
+siendo $ V_{0} $ la tensión inicial del capacitor, que en nuestro caso, es igual a la de la fuente, debido a que se puede considerar que este estuvo conectado mucho tiempo, alcanzando el régimen permanente.
 Es así que se obtienen los siguientes gráficos:
 
 \begin{figure}[H]
@@ -153,7 +149,7 @@ Es así que se obtienen los siguientes gráficos:
 %		f. Representar gráficamente y comparar curvas b) y e) y conclusiones.	%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Al comparar las figuras \ref{fig:carg-real} con \ref{fig:carg-teo} y \ref{fig:desc-real} con \ref{fig:desc-teo}, se termina de confirmar que el circuito analizado es RC paralelo. Se observa que los gráficos teóricos corresponden a los brindados por el osciloscopio, salvando la diferencia de que, tanto la carga como la descarga teórica comienzan para un tiempo inicial nulo.
+Al comparar las figuras \ref{fig:carg-real} con \ref{fig:carg-teo} y \ref{fig:desc-real} con \ref{fig:desc-teo}, se termina de confirmar que el circuito analizado es RC paralelo. Se observa que los gráficos teóricos corresponden a los brindados por el osciloscopio, salvando las diferencias de que, tanto la carga como la descarga teórica comienzan para un tiempo inicial nulo y que en estos últimos gráficos se observan los "saltos", atribuidos al ruido ajeno y al carácter no ideal que poseen los elementos utilizados.
 
 \newpage
 
